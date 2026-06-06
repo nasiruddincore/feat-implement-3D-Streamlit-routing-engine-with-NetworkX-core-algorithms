@@ -1,13 +1,27 @@
-# Intelligent Route Planner Graph Engine Core Platform
+# 🌐 Intelligent Route Planner: 3D Graph Analytics Engine
 
-Highly optimized discrete graph theory algorithm execution engine written in Python. It handles multi-criteria topological navigation operations using `NetworkX`, `FastAPI`, and `PyTest`.
+An interactive 3D route optimization platform engineered with Python and NetworkX. Parses spatial topologies to execute core DSA graph algorithms, including BFS, Dijkstra, and heuristic Spatial A*. Deploys a FastAPI microservice backend and a Streamlit dashboard visualizing multi-criteria path trajectories via interactive Plotly 3D graphs.
 
-## Quickstart Operations Hub
+---
 
-### 1. Initialize Runtime Sandbox Shell Pipeline Environment
-```powershell
-# Spawn clean virtual execution container sandbox
-python -m venv venv
+## 🛠️ System Architecture & Data Flow
 
-# Direct PowerShell execution bypass alignment ignition hook
-.\venv\Scripts\activate
+```text
++-------------------------------------------------------------------------+
+|                          CSV Spatial Topology                           |
+|                            (data/roads.csv)                             |
++------------------------------------+------------------------------------+
+                                     |
+                                     v
++-------------------------------------------------------------------------+
+|                       NetworkX Core Graph Engine                        |
+|        (Parses 25 Nodes, 80 Edge Segments & Multi-Criteria Costs)       |
++------------------------------------+------------------------------------+
+                                     |
+                  +------------------+------------------+
+                  |                                     |
+                  v                                     v
++----------------------------------+  +-----------------------------------+
+|     FastAPI Microservice Core    |  |     Streamlit 3D Dashboard        |
+|  (/api/v1/route/calculate [POST])|  | (Interactive Plotly Trajectories) |
++----------------------------------+  +-----------------------------------+
